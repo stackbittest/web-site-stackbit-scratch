@@ -1,0 +1,31 @@
+stackbitVersion: ~0.3.0
+ssgName: unibit
+buildCommand: unibit build
+#publishDir: dist
+#dataDir: src/data
+#pagesDir: src/pages
+#staticDir: src/static
+#uploadDir: src/upload
+pageLayoutKey: usetemplate # "Layout" within "models" is reserved by Stackbit.  I can add this to the front matter of objects without specifying it in "models" to connect to "layout."
+
+metadata:
+  title: Hello
+  description: A minimum viable build
+  author: Katie Kodes
+  authorURL: 'https://katiekodes.com'
+models:
+  advancedpage:
+    type: page
+    label: Advanced Page
+    layout: advanced
+    # The lack of a "folder," "data," etc. property means to just look for files in "pages" with a FM property of "usetemplate" set to "advanced."  I think.
+    #hideContent: true # As this page doesn't have markdown content, we specify hideContent: true to hide the content input in the CMS. https://www.stackbit.com/blog/jekyll-stackbit-tutorial/
+    hideContent: false
+    fields:
+      - type: string
+        name: slug
+        label: Slug
+        description: 'If not happy with what the system generated, you can hand-edit it here'
+      - type: string
+        name: message
+        label: Message
