@@ -3,6 +3,7 @@
   "description": "Hello world",
   "version": "0.0.1",
   "scripts": {
+    "dev": "gatsby develop",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
