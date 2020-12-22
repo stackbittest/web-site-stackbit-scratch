@@ -9,6 +9,8 @@ layout: default
 #   Not sure how to set it based on the value of "slug," other than by repeating myself.
 #   Considering "permalink" for simple pages only recognizes ":path", ":basename", & "output_ext", this seems like quite a challenge.
 #   I can do /contact/index.html with /:basename/index.html, but not sure how to do /contactme/index.html based on the slug of "contactme" dynamically.
+#   That said, don't worry about it being /contact.html in the output, because http://127.0.0.1:4000/contact/ is working just fine.
+#   Just focus on getting the slug into the URL.
 #permalink: /:basename/index.html
 ---
 

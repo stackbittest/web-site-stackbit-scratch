@@ -4,5 +4,5 @@
   publish = "_site"
 [dev]
   base = "./"
-  command = "jekyll build"
+  command = "jekyll serve"
   publish = "_site"
