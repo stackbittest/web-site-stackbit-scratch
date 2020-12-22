@@ -20,7 +20,7 @@ models:
   advancedpage:
     type: page
     label: Advanced Page
-    urlPath: '{slug}'
+    urlPath: '{urlfragment}'
     filePath: '{slug}.md'
     fields:
       - type: string
