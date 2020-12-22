@@ -1,6 +1,5 @@
 stackbitVersion: ~0.3.0
 ssgName: gatsby
-buildCommand: npm run build
 
 pagesDir: src/minnesotatreats # Indeed, in my MVB example, this is where index.md and about.md live.  For Gatsby, more likely to be src/pages.
 uploadDir: assets/uploads
