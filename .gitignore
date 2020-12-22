@@ -10,6 +10,11 @@
 /.netlify
 /.netlify/**
 
+# Ignore clutter from Jekyll if using it
+.jekyll-cache
+/.jekyll-cache
+/.jekyll-cache/**
+
 # Ignore "node_modules"
 /node_modules/
 /node_modules/**

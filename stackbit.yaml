@@ -1,23 +1,30 @@
 stackbitVersion: ~0.3.0
-ssgName: unibit
-buildCommand: unibit build
-#publishDir: dist
-#dataDir: src/data
-#pagesDir: src/pages
-#staticDir: src/static
-#uploadDir: src/upload
-pageLayoutKey: usetemplate # "Layout" within "models" is reserved by Stackbit.  I can add this to the front matter of objects without specifying it in "models" to connect to "layout."
+ssgName: jekyll
+
+#publishDir: dist # No need for "publishDir" -- that was a Unibit-SSG config thing.  Netlify will worry about this.
+pagesDir: "" # Indeed, in my MVB example, this is where index.md and about.md live.  For Gatsby, more likely to be src/pages.
+#staticDir: "" # N/A for my MVB, but it was in Simon's code.  Will start by commenting it out.
+#dataDir: _data # N/A for my MVB, but it was in Simon's code.  Will start by commenting it out.  Note:  value OK to be null.
+#uploadDir: assets/img # N/A for my MVB, but it was in Simon's code.  Will start by commenting it out.
+pageLayoutKey: null # Oh wow, I didn't know you could use null here!  Cool.  Anyway, if I'd used a real word here, "Layout" within "models" is reserved by Stackbit.  I could've added said word to the front matter of objects without specifying it in "models" to connect to "layout."
+excludePages:
+  - _site/**/*
+  - .github/**/*
+  - README.md
 
 metadata:
   title: Hello
   description: A minimum viable build
   author: Katie Kodes
   authorURL: 'https://katiekodes.com'
+
 models:
   advancedpage:
     type: page
     label: Advanced Page
-    layout: advanced
+    urlPath: '{slug}' # Not sure what this does, but it's in Simon's code.
+    #layout: advanced
+    #filePath: '{slug}/index.md' # In Gatsby, .MD files are usually stored more like this, so a SB.YML file might look more like this.  Alternatively, for Jekyll blog posts, you might specify to throw the date into the filename when looking for the file ... '_posts/{slug}/{moment_format("YYYY-MM-DD")}-{slug}.md'
     # The lack of a "folder," "data," etc. property means to just look for files in "pages" with a FM property of "usetemplate" set to "advanced."  I think.
     #hideContent: true # As this page doesn't have markdown content, we specify hideContent: true to hide the content input in the CMS. https://www.stackbit.com/blog/jekyll-stackbit-tutorial/
     hideContent: false
