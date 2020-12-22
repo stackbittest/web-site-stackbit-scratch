@@ -6,6 +6,7 @@ pagesDir: "" # Indeed, in my MVB example, this is where index.md and about.md li
 #staticDir: "" # N/A for my MVB, but it was in Simon's code.  Will start by commenting it out.
 #dataDir: _data # N/A for my MVB, but it was in Simon's code.  Will start by commenting it out.  Note:  value OK to be null.
 #uploadDir: assets/img # N/A for my MVB, but it was in Simon's code.  Will start by commenting it out.
+uploadDir: null
 pageLayoutKey: null # Oh wow, I didn't know you could use null here!  Cool.  Anyway, if I'd used a real word here, "Layout" within "models" is magic in Unibit.  I could've added said word to the front matter of objects without specifying it in "models" to connect to "layout."
 excludePages:
   - _site/**/*
