@@ -25,7 +25,8 @@ models:
     label: Advanced Page
     urlPath: '{slug}' # Not sure what this does, but it's in Simon's code.
     folder: _my_collection
-    #layout: advanced
+    filePath: '_my_collection/{slug}.md'
+    #layout: advanced # Unibit-related
     #filePath: '{slug}/index.md' # In Gatsby, .MD files are usually stored more like this, so a SB.YML file might look more like this.  Alternatively, for Jekyll blog posts, you might specify to throw the date into the filename when looking for the file ... '_posts/{slug}/{moment_format("YYYY-MM-DD")}-{slug}.md'
     # The lack of a "folder," "data," etc. property means to just look for files in "pages" with a FM property of "usetemplate" set to "advanced."  I think.
     #hideContent: true # As this page doesn't have markdown content, we specify hideContent: true to hide the content input in the CMS. https://www.stackbit.com/blog/jekyll-stackbit-tutorial/
