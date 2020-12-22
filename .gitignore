@@ -15,6 +15,11 @@
 /.jekyll-cache
 /.jekyll-cache/**
 
+# Ignore clutter from Gatsby if using it
+.cache
+/.cache
+/.cache/**
+
 # Ignore "node_modules"
 /node_modules/
 /node_modules/**
