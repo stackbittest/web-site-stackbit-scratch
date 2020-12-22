@@ -7,3 +7,17 @@ export default function Dessert({ pageContext }) {
     </div>
   )
 }
+
+// Per Simon, this minimal GraphQL query ensures that when 'gatsby develop' is running
+// any changes to content files affecting this page are refreshed in browser
+export const query = graphql`
+query {
+  allSitePage {
+    edges {
+      node {
+        id
+      }
+    }
+  }
+}
+`;

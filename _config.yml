@@ -10,6 +10,7 @@ exclude:
   - netlify.toml
   - gatsby-config.js
   - gatsby-node.js
+  - old-jekyll-meh-stackbit.yaml
   - src/
 
 #permalink: /:title/index.html # Sadly, no impact on /contact.md's rendering to HTML.  Not with "/:slug/index.html" either.

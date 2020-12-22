@@ -1,15 +1,12 @@
 stackbitVersion: ~0.3.0
-ssgName: jekyll
+ssgName: gatsby
 
-#publishDir: dist # No need for "publishDir" -- that was a Unibit-SSG config thing.  Netlify will worry about this.
-pagesDir: "" # Indeed, in my MVB example, this is where index.md and about.md live.  For Gatsby, more likely to be src/pages.
-#staticDir: "" # N/A for my MVB, but it was in Simon's code.  Will start by commenting it out.
-#dataDir: _data # N/A for my MVB, but it was in Simon's code.  Will start by commenting it out.  Note:  value OK to be null.
-#uploadDir: assets/img # N/A for my MVB, but it was in Simon's code.  Will start by commenting it out.
+pagesDir: src/minnesotatreats # Indeed, in my MVB example, this is where index.md and about.md live.  For Gatsby, more likely to be src/pages.
 uploadDir: assets/uploads
-pageLayoutKey: null # Oh wow, I didn't know you could use null here!  Cool.  Anyway, if I'd used a real word here, "Layout" within "models" is magic in Unibit.  I could've added said word to the front matter of objects without specifying it in "models" to connect to "layout."
+pageLayoutKey: null
 excludePages:
   - _site/**/*
+  - public/**/*
   - .github/**/*
   - README.md
 
@@ -23,18 +20,12 @@ models:
   advancedpage:
     type: page
     label: Advanced Page
-    folder: _my_collection
-    urlPath: '{slug}' # Not sure what this does, but it's in Simon's code.
-    filePath: '_my_collection/{slug}.md' # I think I'm getting problems with Stackbit because "slug" is a Studio-magic word for the thing it pops up asking you to punch in.
-    #layout: advanced # Unibit-related
-    #filePath: '{slug}/index.md' # In Gatsby, .MD files are usually stored more like this, so a SB.YML file might look more like this.  Alternatively, for Jekyll blog posts, you might specify to throw the date into the filename when looking for the file ... '_posts/{slug}/{moment_format("YYYY-MM-DD")}-{slug}.md'
-    # The lack of a "folder," "data," etc. property means to just look for files in "pages" with a FM property of "usetemplate" set to "advanced."  I think.
-    #hideContent: true # As this page doesn't have markdown content, we specify hideContent: true to hide the content input in the CMS. https://www.stackbit.com/blog/jekyll-stackbit-tutorial/
-    hideContent: false
+    urlPath: '{slug}'
+    filePath: '{slug}.md'
     fields:
       - type: string
-        name: slug
-        label: Slug
+        name: urlfragment
+        label: URL fragment
         description: 'If not happy with what the system generated, you can hand-edit it here'
         required: true
       - type: string
@@ -42,6 +33,6 @@ models:
         label: Message
         required: true
       - type: string # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it
-        name: layout # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it
+        name: lookandfeel # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it
         hidden: true # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it
-        const: default # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it.  Also helps make sure new content is created with the right value in the background.
+        const: dessert # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it.  Also helps make sure new content is created with the right value in the background.
