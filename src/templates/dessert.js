@@ -1,19 +1,20 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-export default function Dessert({ pageContext }) {
-  return <div>{pageContext.frontmatter.message}</div>;
+export default function Dessert({ pageContext, data }) {
+  const post = data.markdownRemark;
+  return <div>{post.frontmatter.message}</div>;
 }
 
-// Per Simon, this minimal GraphQL query ensures that when 'gatsby develop' is running
-// any changes to content files affecting this page are refreshed in browser
-export const query = graphql`
-  query {
-    allSitePage {
-      edges {
-        node {
-          id
-        }
+export const pageQuery = graphql`
+  query WebPageBySlug($urlfrag: String!) {
+    markdownRemark(frontmatter: { urlfragment: { eq: $urlfrag } }) {
+      id
+      html
+      frontmatter {
+        urlfragment,
+        lookandfeel,
+        message
       }
     }
   }

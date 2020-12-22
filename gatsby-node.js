@@ -10,8 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
 			node {
 			  frontmatter {
                 urlfragment,
-				lookandfeel,
-				message
+				lookandfeel
 			  }
 			}
 		  }
@@ -24,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	  path: node.frontmatter.urlfragment,
 	  component: path.resolve(`./src/templates/${node.frontmatter.lookandfeel}.js`),
 	  context: {
-	    frontmatter: node.frontmatter,
+		urlfrag: node.frontmatter.urlfragment,
 	  },
     })
   })
