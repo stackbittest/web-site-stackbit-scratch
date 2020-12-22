@@ -17,3 +17,10 @@ collections:
   my_collection: # The typical way to define a "collection" is to prefix it with an underscore so it's opted out of being built, then opt it back in here.
     output: true
     permalink: /:slug/index.html # This actually works.
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      permalink: /page/:slug/:basename/
