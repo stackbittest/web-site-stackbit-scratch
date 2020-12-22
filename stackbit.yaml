@@ -35,10 +35,12 @@ models:
         name: slug
         label: Slug
         description: 'If not happy with what the system generated, you can hand-edit it here'
+        required: true
       - type: string
         name: message
         label: Message
+        required: true
       - type: string # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it
         name: layout # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it
         hidden: true # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it
-        const: post # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it
+        const: default # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it.  Also helps make sure new content is created with the right value in the background.
