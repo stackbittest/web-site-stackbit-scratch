@@ -1,12 +1,12 @@
 [build]
   base = "./"
-  #command = "jekyll build" # Jekyll
-  command = "npm run build" # Gatsby
-  #publish = "_site" # Jekyll
-  publish = "public" # Gatsby
+  command = "jekyll build" # Jekyll
+  #command = "npm run build" # Gatsby
+  publish = "_site" # Jekyll
+  #publish = "public" # Gatsby
 [dev]
   base = "./"
-  #command = "jekyll serve" # Jekyll
-  command = "npm run dev" # Gatsby
-  #publish = "_site" # Jekyll
-  publish = "public" # Gatsby
+  command = "jekyll serve" # Jekyll
+  #command = "npm run dev" # Gatsby
+  publish = "_site" # Jekyll
+  #publish = "public" # Gatsby

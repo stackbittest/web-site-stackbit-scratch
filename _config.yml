@@ -13,7 +13,12 @@ exclude:
   - old-jekyll-meh-stackbit.yaml
   - old-jekyll-meh-Gemfile
   - old-jekyll-meh-Gemfile.lock
+  - old-gatsby-meh-package-lock.json
+  - old-gatsby-meh-package.json
+  - old-gatsby-meh-stackbit.yaml
+  - old-gatsby-meh-stackbit-copy.yaml
   - src/
+  - public/
 
 #permalink: /:title/index.html # Sadly, no impact on /contact.md's rendering to HTML.  Not with "/:slug/index.html" either.
 #defaults: # Also does not work
@@ -22,7 +27,7 @@ exclude:
 collections:
   my_collection: # The typical way to define a "collection" is to prefix it with an underscore so it's opted out of being built, then opt it back in here.
     output: true
-    permalink: /:slug/index.html # This actually works.
+    #permalink: /:slug/index.html # This actually works.
 
 defaults:
   - scope:
@@ -30,3 +35,5 @@ defaults:
       type: pages
     values:
       permalink: /annoying-pages/:basename/
+
+overall: katie

@@ -1,5 +1,5 @@
 ---
-slug: sofast
+urlfragment: sofast
 message: "Hello world, it's Katie Kodes WHEEEE"
 layout: default
 ---
