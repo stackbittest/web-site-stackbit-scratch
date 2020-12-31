@@ -1,7 +1,7 @@
 stackbitVersion: ~0.3.0
 ssgName: jekyll
 
-pagesDir: src/minnesotatreats # Indeed, in my MVB example, this is where index.md and about.md live.  For Gatsby, more likely to be src/pages.
+pagesDir: src/pages/minnesotatreats # Indeed, in my MVB example, this is where index.md and about.md live.  For Gatsby, more likely to be src/pages.
 uploadDir: assets/uploads
 pageLayoutKey: null
 excludePages:
