@@ -5,6 +5,7 @@
 # Make sure Jekyll doesn't parse files like stackbit.yaml, package.json, or netlify.toml as data sources for HTML rendering
 # Default includes:  ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 exclude:
+  - README.md
   - stackbit.yaml
   - package.json
   - netlify.toml
@@ -17,23 +18,29 @@ exclude:
   - old-gatsby-meh-package.json
   - old-gatsby-meh-stackbit.yaml
   - old-gatsby-meh-stackbit-copy.yaml
-  - src/
+  - src/templates
   - public/
 
 #permalink: /:title/index.html # Sadly, no impact on /contact.md's rendering to HTML.  Not with "/:slug/index.html" either.
 #defaults: # Also does not work
 #  permalink: /:title/index.html # Also does not work
 
+collections_dir: src/pages/jekyllunderscore
 collections:
-  my_collection: # The typical way to define a "collection" is to prefix it with an underscore so it's opted out of being built, then opt it back in here.
+  minnesotatreaties: # The typical way to define a "collection" is to prefix it with an underscore so it's opted out of being built, then opt it back in here.  No need to hand-"include"
     output: true
-    #permalink: /:slug/index.html # This actually works.
+    permalink: /:slug/index.html # This actually works.
 
 defaults:
   - scope:
       path: ""
       type: pages
     values:
-      permalink: /annoying-pages/:basename/
+      permalink: /annoying-pages/:basename/ # Not sure why this stopped handling `testytest.md` at the root
+  - scope:
+      path: "src/pages/minnesotatreats"
+      type: pages
+    values:
+      permalink: /barsbarsbars/:basename/
 
 overall: katie

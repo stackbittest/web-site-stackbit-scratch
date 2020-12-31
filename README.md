@@ -20,6 +20,8 @@ I'm finding it difficult to develop a content model for `.md` file front matter 
 
 Can't figure out why I have the problem _(edits that never finish "saving" or display as previews inline until I hard-reload the page)_ and **jekyll-klise** doesn't.
 
+---
+
 ## Gatsby challenges
 
 Gatsby doesn't seem to make too many "magic word" assumptions about the filenames you use for `.md` files or about the key names you choose for their front matter, so I was able to much more reliably get Stackbit Studio working with the creation and deletion of `.md` files, since I could free up `slug` to be used only by `stackbit.yaml` and completely meaningless to Gatsby.
@@ -29,3 +31,13 @@ I was also able to get a codebase up and running that saved and refreshed my inl
 However, Gatsby's "data cascade," if you will, can be pretty complex to set up in a way that achieves the goal one is aiming for, and this was no exception.
 
 I was not able to click on a piece of data within my Stackbit Studio inline preview and be jumped to the appropriate part of the sidebar.  I had to find it myself in the sidebar.
+
+---
+
+## Misc notes
+
+Gatsby magic folders _(`/src/pages/xyzzy/*.md` is one and will result in `example.com/xyzzy/*` patterns -- although note that `/src/pages/about.js` will be `example.com/about`, so be careful)_:  https://www.gatsbyjs.com/docs/reference/gatsby-project-structure/
+
+Gatsby URL generation from data:  you only need to hand-code setting a slug-like thing from a filename in `gatsby-node.js` if you're using `.md` files and the front matter doesn't already have the data you're looking for.  If you're using a headless CMS, of course you bothered to put a slug-like thing into the data, so you can also just "read the data."  https://www.gatsbyjs.com/docs/tutorial/part-seven/
+
+Jekyll local-machine build/serve:  `bundle exec jekyll build`, `bundle exec jekyll serve`
