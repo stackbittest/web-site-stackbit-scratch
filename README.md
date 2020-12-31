@@ -41,3 +41,6 @@ Gatsby magic folders _(`/src/pages/xyzzy/*.md` is one and will result in `exampl
 Gatsby URL generation from data:  you only need to hand-code setting a slug-like thing from a filename in `gatsby-node.js` if you're using `.md` files and the front matter doesn't already have the data you're looking for.  If you're using a headless CMS, of course you bothered to put a slug-like thing into the data, so you can also just "read the data."  https://www.gatsbyjs.com/docs/tutorial/part-seven/
 
 Jekyll local-machine build/serve:  `bundle exec jekyll build`, `bundle exec jekyll serve`
+
+Reading https://ben.balter.com/2015/02/20/jekyll-collections/, it looks like by the time you've decided to do body-less `.md` collections, you might as well have just used Jekyll's `_data` options, to a certain extent?  Maybe not, because it's nice not to have a mega-file?  _(Not necessarily the case w/ body-less `.md` pages?)_
+
