@@ -36,3 +36,14 @@ models:
         name: lookandfeel # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it
         hidden: true # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it
         const: dessert # I like this idea from Simon, acknowledging that Jekyll front matter typically has a "layout" property but that we don't want Stackbit to manage it.  Also helps make sure new content is created with the right value in the background.
+
+# Shame that I don't know what to do next here for Jekyll & Contentful w/ my own Contentful data model.  Stackbit Builder w/ prebuilt themes, sadly, just do a Unibit parallel build separately of configuring Contentful and fully specifying "model" here, so that doesn't tell me much.
+# It looks like there's a "stackbit-build.sh" file that runs an NPX command to get data before running "jekyll build":
+    # npx @stackbit/stackbit-pull --stackbit-pull-api-url=https://api.stackbit.com/pull/5fef4faf1ff91e0015889118
+    # https://github.com/stackbithq/stackbit-pull
+    # And the netlify.toml says: command = "./stackbit-build.sh"
+# There's nothing special about  curious-eucalyptus/_layouts/advanced.html -- it's just liquid that refers to {{ page.sections }} and such.
+    # I wish I could see the filesystem output of running "stackbit-pull" to get a better sense of what files it's feeding to Jekyll.
+# So ... is Unibit required for Jekyll-headless or not?
+# And am I barking up an annoying tree because all Jekyll-headless is annoying?
+# I mean, though, I do want to make a point that headless is the "best" situation for undecided SSG, so ... maybe not.
