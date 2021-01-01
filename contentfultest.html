@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">Useful Links</h1>
+  <main>
+    <p>~ {{ site.overall }} ~</p>
+    <p>~ {{ site.contentful | jsonify }} ~</p>
+    <p>~ {{ site.data.contentful.spaces.singlespace | jsonify }} ~</p>
+    <ul class="the-loop">
+      <li>Hi</li>
+      {% for snack in site.data.contentful.spaces.singlespace.snicketysnack %}
+        <li>{{ snack.urlfragment }}</li>
+      {% endfor %}
+      <li>Bye</li>
+    </ul>
+    <p>~ {{ site.hello }} ~</p>
+  </main>
+  <h2>So there you had it</h2>
+</div>

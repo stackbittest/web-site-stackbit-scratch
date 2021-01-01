@@ -1,0 +1,9 @@
+---
+snicketysnack:
+- sys:
+    id: 6KTZ1tf6oYK15PjYr5y55l
+    created_at: !ruby/object:DateTime 2021-01-01 15:36:14.062000000 Z
+    updated_at: !ruby/object:DateTime 2021-01-01 15:36:14.062000000 Z
+    content_type_id: snicketysnack
+    revision: 1
+  urlfragment: butterscotch
