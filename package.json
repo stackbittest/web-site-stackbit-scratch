@@ -1,0 +1,16 @@
+{
+  "name": "web-site-stackbit-scratch",
+  "description": "Hello world",
+  "version": "0.0.1",
+  "main": ".eleventy.js",
+  "scripts": {
+    "dev": "npx eleventy --watch --serve",
+    "develop": "npx eleventy --watch --serve",
+    "build": "npx eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": ">=0.11.0",
+    "contentful": ">=8.1.6",
+    "dotenv": ">=8.2.0"
+  }
+}
